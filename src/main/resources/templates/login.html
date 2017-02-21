@@ -1,0 +1,30 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta content="text/html;charset=UTF-8"/>
+<title>Insert title here</title>
+<link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+</head>
+<body>
+	<br/>
+	<h3 th:text="${qq}"></h3>
+	<button type="button" class="btn btn-info text-center" 
+	onclick="javascript:window.location.href='insertpro'">添加商品</button>
+	<table class="table table-striped">
+		<tr class="">
+			<td>编号</td>
+			<td>名称</td>
+			<td>描述</td>
+			<td colspan="2">操作</td>
+		</tr>
+		
+		<tr th:each="product:${products}" >
+			<td th:text="${product.id}"></td>
+			<td th:text="${product.name}"></td>
+			<td th:text="${product.description}"></td>
+			<td><a th:href="@{'delete/'+${product.id}}">删除</a></td>
+			<td><a th:href="@{'updateui/'+${product.id}}">修改</a></td>
+		</tr>
+	
+	</table>
+</body>
+</html>

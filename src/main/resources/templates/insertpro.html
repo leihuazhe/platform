@@ -1,0 +1,27 @@
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta content="text/html;charset=UTF-8"/>
+<title>Insert title here</title>
+<link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+	<script th:src="@{bootstrap/js/jquery.min.js}"></script>
+	<script th:src="@{bootstrap/js/bootstrap.min.js}"></script>
+	<script th:src="@{bootstrap/js/holder.min.js}"></script>
+	<script th:src="@{bootstrap/js/application.js}"></script>
+</head>
+<body>
+<br/>
+	<form action="insert" class="col-md-4" method="post">
+		<div class="form-group">
+			<label for="exampleInputEmail1">商品名称：</label> <input
+				type="text" class="form-control" id="exampleInputEmail1"
+				placeholder="商品名称" name="name"/>
+		</div>
+		<div class="form-group">
+			<label for="exampleInputPassword1">商品描述：</label> <input
+				type="text" class="form-control" id="exampleInputPassword1"
+				placeholder="商品描述" name="description"/>
+		</div>
+		<button type="submit" class="btn btn-default">新增</button>
+	</form>
+</body>
+</html>
