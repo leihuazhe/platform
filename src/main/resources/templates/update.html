@@ -2,19 +2,19 @@
 <head>
 <meta content="text/html;charset=UTF-8"/>
 <title>Insert title here</title>
-	<link th:href="@{bootstrap/css/bootstrap.min.css}" rel="stylesheet"/>
+	<link th:href="@{bootstrap/css/bootstrap.css}" rel="stylesheet"/>
 	<script th:src="@{bootstrap/js/jquery.min.js}"></script>
 	<script th:src="@{bootstrap/js/bootstrap.min.js}"></script>
 	<script th:src="@{bootstrap/js/holder.min.js}"></script>
 	<script th:src="@{bootstrap/js/application.js}"></script>
 </head>
 <body>
-<br/>
-	<form th:action="@{../update}" class="col-md-5" method="get">
+	<br/>
+	<form th:action="@{/update}"  method="post" class="col-md-5">
 		<div class="form-group">
 			<label for="exampleInputEmail1">商品编号：</label> <input
 				type="text" class="form-control" 
-				th:value="${product.id}" name="id"/>
+				th:value="${product.id}" name="id" readonly="readonly"/>
 		</div>
 		
 		
@@ -28,7 +28,7 @@
 				type="text" class="form-control" 
 				th:value="${product.description}" name="description"/>
 		</div>
-		<button type="submit" class="btn btn-default">修改</button>
+		<button type="submit" class="btn btn-info">修改</button>
 	</form>
 </body>
 </html>

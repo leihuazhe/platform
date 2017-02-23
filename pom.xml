@@ -111,22 +111,31 @@
 			<groupId>org.springframework</groupId>
 			<artifactId>springloaded</artifactId>
 		</dependency>
+		<!-- <dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+		</dependency> -->
 	</dependencies>
 
 	<build>
-		<plugins>
-			<plugin>
-				<groupId>org.springframework.boot</groupId>
-				<artifactId>spring-boot-maven-plugin</artifactId>
-					<!-- 断点调试 -->
-					<!-- <configuration>
-						<jvmArguments>
-							-Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005
-						</jvmArguments>
-					</configuration> -->
-			</plugin>
-		</plugins>
-	</build>
+	<plugins>
+		<plugin>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-maven-plugin</artifactId>
+			<!-- 断点调试 -->
+			<!-- <configuration> <jvmArguments> -Xdebug -Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005 
+				</jvmArguments> </configuration> -->
+			<!-- <dependencies>
+				spring热部署
+				<dependency>
+					<groupId>org.springframework</groupId>
+					<artifactId>springloaded</artifactId>
+					<version>1.2.6.RELEASE</version>
+				</dependency>
+			</dependencies> -->
+		</plugin>
+	</plugins>
+</build>
 
 
 </project>

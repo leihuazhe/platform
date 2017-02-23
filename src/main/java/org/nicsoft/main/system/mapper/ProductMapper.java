@@ -30,6 +30,9 @@ public interface ProductMapper {
 
 
 		void updateProduct(Product product);
+
+
+		List<Product> searchProduct(Product pro);
 		
 		
 }

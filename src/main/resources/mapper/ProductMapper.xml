@@ -12,8 +12,11 @@
     
     <!-- saveOne -->
     <insert id="saveOne" parameterType="org.nicsoft.main.system.entity.Product">
+    	<selectKey keyProperty="id" resultType="int" order="AFTER">
+    		SELECT LAST_INSERT_ID()
+    	</selectKey>
     	INSERT INTO product
-    	(NAME,description) 
+    	(name,description) 
     	VALUES(#{name},#{description})
     </insert>
     
@@ -26,7 +29,13 @@
     	where id=#{id}
     </update>
     
-    
+    <!-- findbyCondition -->
+    <select id="searchProduct" resultType="Product" parameterType="org.nicsoft.main.system.entity.Product">
+        select * from product
+        <where>
+        	and	name like '%${name}%'
+        </where>
+    </select>
     
     
 </mapper>

@@ -16,5 +16,7 @@ public interface ProductService {
 
 	void update(Product product);
 
+	List<Product> searchProduct(Product pro);
+
 
 }

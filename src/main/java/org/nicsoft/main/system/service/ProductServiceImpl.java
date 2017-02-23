@@ -14,8 +14,6 @@ public class ProductServiceImpl implements ProductService{
 	private ProductMapper productMapper;
 	
 	
-	
-	
 	@Override
 	public List<Product> findAll() {
 		
@@ -60,6 +58,15 @@ public class ProductServiceImpl implements ProductService{
 	public void update(Product product) {
 		
 		productMapper.updateProduct(product);
+	}
+
+
+
+
+	@Override
+	public List<Product> searchProduct(Product pro) {
+		return productMapper.searchProduct(pro);
+		
 	}
 
 }
